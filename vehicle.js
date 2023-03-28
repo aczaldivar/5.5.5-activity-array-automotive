@@ -1,3 +1,4 @@
+//Vehicle's characteristics declaration.
 class Vehicle {
     constructor(make, model, year, color, mileage) {
         this.make = make;
@@ -10,7 +11,7 @@ class Vehicle {
         this.started = false;
         this.numberOfWheels = 0;
     }
-
+//Start if there's fuel in the car. 
     start() {
         if (this.fuel > 0) {
             return this.started = true;
@@ -20,6 +21,7 @@ class Vehicle {
             console.log("engine cannot start...");
         }
     }
+//accelerate and start the engine or else the car is out of fuel and can't run.
     accelerate() {
         if (this.started) {
             if (this.fuel > 0) {
@@ -86,6 +88,6 @@ class Vehicle {
 }
 
 //This exports things you want to use from this "module", more info in readme
-module.exports = {
-    Vehicle
-}
+//module.exports = {
+//    Vehicle
+//}
